@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: vibe-trading-api
+    runtime: python
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -e .
+    startCommand: vibe-trading serve --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: LANGCHAIN_PROVIDER
+        value: minimax
+      - key: LANGCHAIN_MODEL_NAME
+        value: MiniMax-Text-01
+      - key: MINIMAX_API_KEY
+        sync: false
+      - key: MINIMAX_BASE_URL
+        value: https://api.minimax.io/v1
+      - key: CORS_ORIGINS
+        value: https://vibe-trading.vercel.app,https://*.vercel.app,http://localhost:3000,http://localhost:5173
