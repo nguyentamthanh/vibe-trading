@@ -18,6 +18,8 @@ agent/.ui_runtime/
 agent/.tasks/
 agent/tests/*_result.json
 .ruff_cache/
+.omc
+.next
 frontend/dist/
 frontend/tsconfig.tsbuildinfo
 
