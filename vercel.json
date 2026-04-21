@@ -3,6 +3,6 @@
   "outputDirectory": "frontend/dist",
   "framework": "vite",
   "env": {
-    "VITE_API_URL": "https://vibe-trading-api.onrender.com"
+    "VITE_API_URL": "https://vibe-trading-api-s6gi.onrender.com"
   }
 }
